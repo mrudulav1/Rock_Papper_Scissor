@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Result</title>
+</head>
+<body>
+    <h1>Game Result</h1>
+    <p>Your choice: {{ user_choice }}</p>
+    <p>Computer's choice: {{ computer_choice }}</p>
+    <h2>{{ result }}</h2>
+    <form action="{% url 'game:play_again' %}" method="get">
+        <button type="submit">Play Again</button>
+    </form>
+</body>
+</html>

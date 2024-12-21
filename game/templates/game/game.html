@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+    <h1>Choose your move!</h1>
+    <form action="{% url 'game:result' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" name="choice" value="rock">Rock</button>
+        <button type="submit" name="choice" value="paper">Paper</button>
+        <button type="submit" name="choice" value="scissors">Scissors</button>
+    </form>
+</body>
+</html>
